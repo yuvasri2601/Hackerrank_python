@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    N = int(input())
+    listt=[]
+    for i in range(0,N):
+        query_name=input().split()
+        if(query_name[0]=="insert"):
+            listt.insert(int(query_name[1]),int(query_name[2]))
+        elif(query_name[0]=="print"):
+            print(listt)
+        elif(query_name[0]=="remove"):
+            listt.remove(int(query_name[1]))
+        elif(query_name[0]=="append"):
+            listt.append(int(query_name[1]))
+        elif(query_name[0]=="sort"):
+            listt.sort()
+        elif(query_name[0]=="pop"):
+            listt.pop()
+        else:
+            listt.reverse()
