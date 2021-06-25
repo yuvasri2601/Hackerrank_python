@@ -1,0 +1,8 @@
+n=input()
+b=list(n)
+res=[]
+for i in range(0,len(b)):
+  final=min(b)
+  res.append(final)
+  c=b.remove(final)
+print(*res,sep="")
