@@ -1,0 +1,29 @@
+s=list(input().split())
+ss=[]
+num=['0','1','2','3','4','5','6','7','8','9']
+spl=['#','@','$','*','&','?','!','+','-']
+for x in s:
+  if x not in ss:
+    ss.append(x)
+#print(ss)
+for i in spl:
+  if i in ss:
+     a=ss.index(i)
+     b=ss[0:a+2]
+     #print(b)
+     for j in num:
+       if j in b:
+         c=b.index(j)
+         #b[c]=""
+         b.pop(c)
+         #print(b)
+     for k in spl:
+       if k in b:
+         d=b.index(k)
+         b.pop(d)
+     #print(b)
+     for s in b:
+       if s.title() in b[1:]:
+         res=b.index(s.title())
+         b.pop(res)
+     print(*b)
