@@ -1,0 +1,33 @@
+ph=input()
+a=[]
+res=[]
+check=['-',' ']
+for i in ph:
+  if i not in check:
+    a.append(i)
+#print(a)
+for j in range(len(a)):
+  if len(a)>4:
+    b=a[0:3]
+    bb=''.join(b)
+    #print(bb)
+    res.append(bb)
+    res.append('-')
+    del a[0:3]
+if len(a)==4:
+  c=''.join(a[0:2])
+  d=''.join(a[2:4])
+  #print(c)
+  res.append(c)
+  res.append('-')
+  #print(d)
+  res.append(d)
+  res.append('-')
+else:
+  aa=''.join(a)
+  #print(aa)
+  res.append(aa)
+  res.append('-')
+#print(res)
+res[-1]=""
+print(*res,sep="")
