@@ -1,0 +1,11 @@
+n=int(input())
+a=[input().split() for i in range(n)]
+query=input()
+sum=0
+for i in range(n):
+  if(a[i][0]==query):
+    b=a[i][1:]
+    for j in b:
+     sum+=float(j)
+     ans=sum/len(b)
+print('%.2f'%ans)
