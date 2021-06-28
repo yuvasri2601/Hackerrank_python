@@ -1,0 +1,27 @@
+n=int(input())
+listt=[]
+result=[]
+for i in range(n):
+  records=[]
+  student_name=input()
+  grade=float(input())
+  records.append(student_name)
+  records.append(grade)
+  listt.append(records)
+#print(listt)
+#for i in range (len(listt)):
+   #print(listt[i][1])
+a=dict(listt)
+#print (a)
+#for i in range(n):
+b=a.values()
+z=sorted(b)[1]
+#print(z)
+for key,value in a.items():
+  if z==value:
+    result.append(key)
+#print(result)
+result.sort()
+#print(result)
+for i in result:
+  print(i)
