@@ -1,0 +1,24 @@
+
+from datetime import date
+n=input()
+month=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+day=['st','nd','rd','th']
+for i in day:
+  if i in n:
+    a=n.replace(i,"")
+    #print(a)
+    if len(a)==11:
+      x=a[0:2]
+      xx=a[3:6]
+      xxx=a[7:]
+      y=month.index(xx)
+      yy=y+1
+    else:
+      x=a[0:1]      
+      xx=a[2:5]
+      xxx=a[5:]
+      y=month.index(xx)
+      yy=y+1
+if (int(xxx)>=1900 and int(xxx)<=2100):
+    res=date(int(xxx),int(yy),int(x))
+    print(res)
