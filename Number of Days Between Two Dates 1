@@ -1,0 +1,36 @@
+from datetime import date
+n=input()
+a=["#"]
+b=n.index('#')
+first=n[0:b]
+second=n[b+1:]
+#print(first)
+#print(second)
+x=first[0:4]
+xx=first[5:7]
+xxx=first[8:10]
+t1=date(int(x),int(xx),int(xxx))
+#print(t1)
+#print (x)
+#print(xx)
+#print(xxx)
+y=second[0:4]
+yy=second[5:7]
+yyy=second[8:10]
+t2=date(int(y),int(yy),int(yyy))
+#print(t2)
+t3=t1-t2
+t4=abs(t3)
+#print(t3)
+t=str(t4)
+#print(t)
+rem=[' ']
+for i in rem:
+  if i in t:
+    ind=t.index(i)
+    print(t[0:ind])
+#for i in t:
+  #print(i)
+#print(y)
+#print(yy)
+#print(yyy)
