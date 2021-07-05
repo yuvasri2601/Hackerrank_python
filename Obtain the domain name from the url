@@ -1,0 +1,4 @@
+string=input()
+search='www.'
+index_search=string.index(search)
+print(string[index_search+4:])
