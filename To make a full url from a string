@@ -1,0 +1,12 @@
+string=input()
+search='com'
+search2='#'
+a=string.index(search)
+aa=a+3
+s=string[0:aa]
+ss=string[aa:]
+if search2 in s:
+  res=s.replace(search2,'.')
+if search2 in ss:
+  res2=ss.replace(search2,'/')
+print('https://',res,res2,'/',sep="")
