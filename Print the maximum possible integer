@@ -1,0 +1,19 @@
+n=int(input())
+sum_input=0
+res=[]
+empty_list=[]
+for i in str(n):
+  sum_input+=int(i)
+for i in range(0,n):
+  empty_list.append(i)
+for i in empty_list:
+  sum=0
+  for x in str(i):
+    sum=sum+int(x)
+  res.append(sum)
+find_max=max(res)
+if find_max>sum_input:
+  b=res.index(find_max)
+  print(b)
+else:
+  print(n)
