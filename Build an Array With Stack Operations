@@ -1,0 +1,22 @@
+import json
+input_string=input()
+a=['-','#']
+b=[]
+for i in input_string:
+  if i not in a:
+    b.append(i)
+first=b[0:-1]
+n=b[-2]
+nn=first[0]
+numbers=['1','2','3','4','5','6','7','8','9','0']
+index_n=numbers.index(n)
+upto_n=numbers[0:(index_n)+1]
+result=[]
+for i in upto_n:
+  if i in first:
+    result.append("Push")
+  else:
+    result.append("Push")
+    result.append("Pop")
+final=json.dumps(result)
+print(final.replace(" ", ""))
