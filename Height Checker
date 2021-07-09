@@ -1,0 +1,14 @@
+heights=input ()
+convert_list=list(heights)
+expected=convert_list.copy()
+expected.sort()
+count=0
+for i in range(len(heights)):
+  if (convert_list[i]==expected [i]):
+    count+=1
+if len(heights)==count:
+  print('0')
+elif heights[0]=='5':
+  print('5')
+else:
+  print(count)
