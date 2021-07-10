@@ -1,0 +1,6 @@
+n=input()
+search='.'
+for i in search:
+    if i in n:
+        a=n.replace(search,'[.]')
+print(a)
