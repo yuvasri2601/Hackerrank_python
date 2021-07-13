@@ -1,0 +1,11 @@
+n=input()
+grid=list(n)
+search=['-']
+res=[]
+count=0
+for i in grid:
+  if i in search:
+    a=grid.index(i)
+    res.append(a+1)
+    grid.pop(a)
+print(len(res))
