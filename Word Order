@@ -1,0 +1,8 @@
+from collections import Counter 
+n=int(input()) 
+nn=[input() for i in range(n)] 
+a=Counter(nn).values() 
+b=set(nn) 
+print(len(b)) 
+for i in a: 
+   print(i,end=" ")
