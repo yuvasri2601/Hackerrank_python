@@ -1,0 +1,10 @@
+n=int(input()) 
+total_money=0 
+size=list(map(int,input().split())) 
+m=int(input()) 
+for i in range(m): 
+    a=list (map(int,input().split())) 
+    if a[0] in size: 
+        b=size.remove(a[0]) 
+        total_money+=a[1] 
+print(total_money)
