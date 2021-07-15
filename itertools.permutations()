@@ -1,0 +1,7 @@
+from itertools import permutations 
+s=input () ss=list(s[:-2]) 
+aa=int(s[-1]) 
+res=list(permutations(ss,aa)) 
+b=sorted(res) 
+for i in b: 
+  print(*i,sep='')
