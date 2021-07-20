@@ -1,0 +1,13 @@
+n,difficulty=input().split()
+max_difficulty=int(difficulty)
+a=list(map(int,input().split()))
+count=0
+if max_difficulty in a:
+  print(a.index(max_difficulty))
+else:
+  for i in a:
+    if i>max_difficulty:
+      print(a.index(i))
+      break
+  if i<max_difficulty:
+    print(len(a))
