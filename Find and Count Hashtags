@@ -1,0 +1,66 @@
+n=int(input())
+search1="#"
+search2=" "
+res=[]
+final=[]
+output=[]
+c=[]
+for i in range(n):
+  s=input()
+  res.append(s)
+for i in res:
+  if search1 in i:
+    a=i.index(search1)
+    aa=i[a:]
+    final.append(aa)
+for i in final:
+  if search2 in i:
+    b=i.index(search2)
+    output.append(i[0:b])
+  else:
+    output.append(i)
+#sort_output=output.sort()
+#print(output)
+outputt=set(output)
+outputtt=list(outputt)
+#print(outputtt)
+ress=''.join(res)
+#print(ress)
+#output.sort()
+#print(output)
+for i in outputtt:
+  x=ress.count(i)
+  c.append(x)
+xx=dict(zip(outputtt,c))
+#print(xx)
+xx_values=xx.values()
+sort_xx=sorted(xx_values, reverse=True)
+#print(sort_xx)
+set_sort=set(sort_xx)
+j=list(set_sort)[::-1]
+#print(j)
+store=[]
+output1=[]
+flipped = {} 
+for key, value in xx.items(): 
+  if value not in flipped: 
+     flipped[value] = [key] 
+  else: 
+     flipped[value].append(key) 
+#print(flipped)
+key=flipped.keys()
+for i in flipped.values():
+   #print(i)
+   i.sort()
+   store.append(i)
+#print(store)
+convert=dict(zip(key,store))
+#print(convert)
+for i in range(len(j)):
+  for key,value in convert.items():
+    if j[i]==key:
+      finn=value
+      output1.extend(finn)
+#print(output)
+for i in range(5):
+  print(i)
