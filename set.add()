@@ -1,0 +1,7 @@
+n=int(input())
+b=[]
+for i in range(n):
+    a=input()
+    b.append(a)
+c=set(b)
+print(len(c))
