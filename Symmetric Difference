@@ -1,0 +1,12 @@
+n=int(input())
+nn=list(map(int,input().split()))
+nnn=set(nn)
+m=int(input())
+mm=list(map(int,input().split()))
+mmm=set(mm)
+x=nnn.symmetric_difference(mmm)
+xx=list(x)
+xx.sort()
+#print(xx)
+for i in xx:
+    print(i)
