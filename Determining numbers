@@ -1,0 +1,12 @@
+
+from collections import Counter
+n=int(input())
+m=list(map(int,input().split()))
+x=Counter(m)
+res=[]
+for key, value in x.items():
+  if value==1:
+    res.append(key)
+res.sort()
+for i in res:
+  print(i,end=" ")
