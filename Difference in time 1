@@ -1,0 +1,99 @@
+from datetime import datetime
+
+R=input()
+
+if R[0]=='0':
+
+  H=int(R[1])
+
+else:
+
+  H=int(R[0:2])
+
+if R[3]=='0':
+
+  M=int(R[4])
+
+else:
+
+  M=int(R[3:5])
+
+if R[6]=='0':
+
+  S=int(R[7])
+
+else:
+
+  S=int(R[6:8])
+
+x=datetime (2000,5, 3,H,M,S)
+
+#print(x)
+
+n=int(input())
+
+for i in range(n):
+
+  P=input()
+
+  if P==R:
+
+    print("now")
+
+  else:
+
+    if P[0]=='0':
+
+      HH=int(P[1])
+
+    else:
+
+      HH=int(P[0:2])
+
+    if P[3]=='0':
+
+      MM=int(P[4])
+
+    else:
+
+      MM=int(P[3:5])
+
+    if P[6]=='0':
+
+      SS=int(P[7])
+
+    else:
+
+      SS=int(P[6:8])
+
+    xx=datetime (2000,5, 3,HH,MM,SS)
+
+    res=x-xx
+
+    ress=str(res)
+    search=':'
+    search_index=ress.index(search)
+    if ress[0:search_index]=='1':
+        print('1 hour ago')
+    elif ress[0]!='0':
+
+      print(ress[0:search_index],"hours ago")
+    
+
+    elif ress[2:4]=='01':
+
+      print('1 minute ago')
+    elif ress[2]=='0' and ress[3]!='0':
+        print(ress[3],"minutes ago")
+
+    elif ress[2:4]!='00':
+
+      print(ress[2:4],"minutes ago")
+
+    elif ress[2]=='0' and ress[3]!='0':
+
+      print(ress[3],"minutes ago")
+
+    else:
+
+      print(ress[-2:],"seconds ago")
