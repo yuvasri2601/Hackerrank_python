@@ -1,0 +1,20 @@
+def binary_search(list1, key):
+  low=0
+  high=len(list1)-1
+  mid=0
+  while(low<=high):
+    mid=(high+low)//2
+    if key>list1[mid]:
+      low=mid+1
+    elif key<list1[mid]:
+      high=mid-1
+    else:
+      return mid
+  return -1
+list1=list(map(int,input().split())) 
+key = int(input())
+result=binary_search(list1,key)
+if result!=-1:  
+  print("Element is present at index",str(result))
+else:
+  print("Element is not found")
