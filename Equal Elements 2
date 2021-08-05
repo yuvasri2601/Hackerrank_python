@@ -1,0 +1,15 @@
+t=int(input())
+odd=[]
+even=[]
+for i in range(t):
+  n=int(input())
+  a=list(map(int,input().split()))
+for i in a:
+  if i%2==0:
+     even.append(i)
+  else:
+     odd.append(i)
+odd_len=len(odd)
+even_len=len(even)
+result=min(odd_len,even_len)
+print(result)
