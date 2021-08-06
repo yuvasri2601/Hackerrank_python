@@ -1,0 +1,18 @@
+t=int(input())
+for i in range(t):
+  n,m,c=map(str,input().split())
+  binary_n=bin(int(n))
+  binary=binary_n[2:]
+  x_bit=binary.zfill(16)
+  print(x_bit)
+  if c=='L':
+    left=x_bit[0:int(m)]
+    remain=x_bit[int(m):]
+    result=str(remain+left)
+    print(int(result,2))
+  else:
+   right=x_bit[-(int(m)):]
+   len_right=len(right)
+   remain=x_bit[0:16-len_right]
+   result=str(right+remain)
+   print(int(result,2))
