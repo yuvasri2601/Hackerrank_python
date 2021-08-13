@@ -1,0 +1,10 @@
+import numpy as np
+m=int(input())
+n=list(map(int,input().split()))
+nn=[]
+res=[]
+for i in range(len(n)+1):
+  for j in range(i):
+    a=n[j:i]
+    res.append(np.gcd.reduce(a))
+print(len(set(res)))
