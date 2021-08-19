@@ -1,0 +1,4 @@
+n=input()
+if '6' in n:
+  n=n.replace('6','')
+  print(len(n))
